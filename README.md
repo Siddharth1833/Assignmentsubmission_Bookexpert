@@ -235,6 +235,24 @@ python src/query.py
 4. Create a new API key
 5. Copy the key and add it to your `.env` file
 
+### Setting Up Secrets on Streamlit Cloud
+
+When deploying to Streamlit Cloud, you need to set the API key through the **Streamlit Cloud secrets management**:
+
+1. Go to your app dashboard on [share.streamlit.io](https://share.streamlit.io)
+2. Click on your app → **Settings** (gear icon)
+3. Click **Secrets**
+4. Add your secrets in TOML format:
+   ```toml
+   GROQ_API_KEY = "your_groq_api_key_here"
+   ```
+5. Save and rerun your app
+
+**Local Testing with Secrets:**
+- Create a file `.streamlit/secrets.toml` (not committed to git)
+- Use the format from `.streamlit/secrets.toml.example`
+- This file will be used for local testing and automatically ignored
+
 ## Example Queries
 
 Here are 5+ sample questions you can ask the RAG bot:
